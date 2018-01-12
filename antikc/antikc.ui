@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>antikcClass</class>
+ <widget class="QMainWindow" name="antikcClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>antikc</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow
+{
+	background-color: rgb(202, 225, 255);
+}
+
+QMenuBar
+{
+	
+	background-color: rgb(128, 194, 255);
+}
+
+QMenu
+{
+	background-color: rgb(202, 225, 255);
+}
+
+
+QMenu::item:selected
+{
+	background-color: rgb(221, 236, 255);
+	color: rgb(36, 36, 36);
+ }
+</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="styleSheet">
+    <string notr="true">
+QLabel
+{
+	color: rgb(36, 36, 36);
+}
+
+QHeaderView::section
+{	
+	color: rgb(45, 45, 45);
+}
+
+QTableView
+{
+	gridline-color: rgb(106, 106, 106);
+	outline: 0;
+}
+
+QTableView::item
+{
+	border: 0px;
+}
+
+QTableView::item::selected
+{
+	background-color: rgb(104, 180, 255);
+}
+
+QScrollBar:vertical {              
+        border: 1px solid #999999;
+        background:white;
+        width:10px;    
+        margin: 0px 0px 0px 0px;
+    }
+    QScrollBar::handle:vertical {
+        background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop: 0 rgb(118, 134, 224), stop: 0.5 rgb(118, 134, 224), stop:1 rgb(118, 134, 224));
+        min-height: 0px;
+    }
+    QScrollBar::add-line:vertical {
+        background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop: 0 rgb(118, 134, 224), stop: 0.5 rgb(118, 134, 224),  stop:1 rgb(118, 134, 224));
+        height: 0px;
+        subcontrol-position: bottom;
+        subcontrol-origin: margin;
+    }
+    QScrollBar::sub-line:vertical {
+        background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop: 0  rgb(118, 134, 224), stop: 0.5 rgb(118, 134, 224),  stop:1 rgb(118, 134, 224));
+        height: 0 px;
+        subcontrol-position: top;
+        subcontrol-origin: margin;
+    }</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="2" column="0" colspan="4">
+     <widget class="QTableView" name="tableView">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="3">
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="maximumSize">
+       <size>
+        <width>50</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>85</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>ms</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="font">
+       <font>
+        <family>Noto Mono</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>antikc</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="3">
+     <widget class="QLabel" name="version_label">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(76, 76, 76);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionQuit_3"/>
+   </widget>
+   <widget class="QMenu" name="menuSettings">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <addaction name="actionPreferences"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuSettings"/>
+  </widget>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionQuit_2">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionQuit_3">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionPreferences">
+   <property name="text">
+    <string>Preferences</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="antikc.qrc"/>
+ </resources>
+ <connections/>
+</ui>
