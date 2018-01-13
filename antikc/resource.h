@@ -4,7 +4,7 @@
 
 // Valori predefiniti successivi per i nuovi oggetti
 // 
-#define RC_VERSION 0,0,1,2
+#define RC_VERSION 0,0,2,2
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        101
