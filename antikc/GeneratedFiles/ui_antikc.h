@@ -29,10 +29,8 @@ QT_BEGIN_NAMESPACE
 class Ui_antikcClass
 {
 public:
-    QAction *actionQuit;
-    QAction *actionQuit_2;
-    QAction *actionQuit_3;
     QAction *actionPreferences;
+    QAction *actionQuit;
     QWidget *centralWidget;
     QGridLayout *gridLayout;
     QTableView *tableView;
@@ -73,14 +71,10 @@ public:
 "	color: rgb(36, 36, 36);\n"
 " }\n"
 ""));
-        actionQuit = new QAction(antikcClass);
-        actionQuit->setObjectName(QStringLiteral("actionQuit"));
-        actionQuit_2 = new QAction(antikcClass);
-        actionQuit_2->setObjectName(QStringLiteral("actionQuit_2"));
-        actionQuit_3 = new QAction(antikcClass);
-        actionQuit_3->setObjectName(QStringLiteral("actionQuit_3"));
         actionPreferences = new QAction(antikcClass);
         actionPreferences->setObjectName(QStringLiteral("actionPreferences"));
+        actionQuit = new QAction(antikcClass);
+        actionQuit->setObjectName(QStringLiteral("actionQuit"));
         centralWidget = new QWidget(antikcClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         centralWidget->setStyleSheet(QLatin1String("\n"
@@ -190,7 +184,7 @@ public:
 
         menuBar->addAction(menuFile->menuAction());
         menuBar->addAction(menuSettings->menuAction());
-        menuFile->addAction(actionQuit_3);
+        menuFile->addAction(actionQuit);
         menuSettings->addAction(actionPreferences);
 
         retranslateUi(antikcClass);
@@ -201,10 +195,8 @@ public:
     void retranslateUi(QMainWindow *antikcClass)
     {
         antikcClass->setWindowTitle(QApplication::translate("antikcClass", "antikc", Q_NULLPTR));
-        actionQuit->setText(QApplication::translate("antikcClass", "Quit", Q_NULLPTR));
-        actionQuit_2->setText(QApplication::translate("antikcClass", "Quit", Q_NULLPTR));
-        actionQuit_3->setText(QApplication::translate("antikcClass", "Quit", Q_NULLPTR));
         actionPreferences->setText(QApplication::translate("antikcClass", "Preferences", Q_NULLPTR));
+        actionQuit->setText(QApplication::translate("antikcClass", "Quit", Q_NULLPTR));
         lineEdit->setText(QApplication::translate("antikcClass", "85", Q_NULLPTR));
         label->setText(QApplication::translate("antikcClass", "ms", Q_NULLPTR));
         label_2->setText(QApplication::translate("antikcClass", "antikc", Q_NULLPTR));

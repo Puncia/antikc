@@ -9,6 +9,8 @@
 #include <Windows.h>
 #include <QCoreApplication>
 #include <QStandardItemModel>
+#include <Preferences.h>
+#include <QWindow>
 
 #define ALLOW_INPUT 0
 #define BLOCK_INPUT 1
@@ -45,10 +47,12 @@ public:
 
 public slots:
 	void update_ms_threshold(const QString &ms);
+	void quit_app();
+	void open_preferences();
 
 private:
 	Ui::antikcClass ui;
 	HANDLE h_handle;
 	INPUT ip;
-
+	Preferences *pref;
 };

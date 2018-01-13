@@ -178,7 +178,7 @@ QScrollBar:vertical {
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionQuit_3"/>
+    <addaction name="actionQuit"/>
    </widget>
    <widget class="QMenu" name="menuSettings">
     <property name="title">
@@ -189,24 +189,14 @@ QScrollBar:vertical {
    <addaction name="menuFile"/>
    <addaction name="menuSettings"/>
   </widget>
-  <action name="actionQuit">
-   <property name="text">
-    <string>Quit</string>
-   </property>
-  </action>
-  <action name="actionQuit_2">
-   <property name="text">
-    <string>Quit</string>
-   </property>
-  </action>
-  <action name="actionQuit_3">
-   <property name="text">
-    <string>Quit</string>
-   </property>
-  </action>
   <action name="actionPreferences">
    <property name="text">
     <string>Preferences</string>
+   </property>
+  </action>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
    </property>
   </action>
  </widget>

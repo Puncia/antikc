@@ -58,6 +58,8 @@ antikc::antikc(QWidget *parent)
 		QString::number(v[3]));
 
 	QObject::connect(ui.lineEdit, SIGNAL(textChanged(const QString &)), this, SLOT(update_ms_threshold(const QString &)));
+	QObject::connect(ui.actionQuit, &QAction::triggered, this, &antikc::quit_app);
+	QObject::connect(ui.actionPreferences, &QAction::triggered, this, &antikc::open_preferences);
 
 	ui.lineEdit->setMaxLength(4);
 	QRegExpValidator *rxv = new QRegExpValidator(QRegExp("\\d*"), this);
@@ -198,6 +200,18 @@ void antikc::updateView()
 			iModel->appendRow(itemlist);
 		}
 	}
+}
+
+void antikc::quit_app()
+{
+	exit(0);
+}
+
+void antikc::open_preferences()
+{
+	pref = new Preferences();
+	pref->setWindowFlags(Qt::WindowSystemMenuHint);	
+	pref->exec();
 }
 
 antikc::~antikc()
