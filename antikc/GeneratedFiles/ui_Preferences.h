@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'Preferences.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.12.9
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,12 +10,9 @@
 #define UI_PREFERENCES_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QGridLayout>
-#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QWidget>
@@ -34,7 +31,7 @@ public:
     void setupUi(QWidget *Preferences)
     {
         if (Preferences->objectName().isEmpty())
-            Preferences->setObjectName(QStringLiteral("Preferences"));
+            Preferences->setObjectName(QString::fromUtf8("Preferences"));
         Preferences->resize(400, 150);
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
@@ -46,13 +43,13 @@ public:
         gridLayout = new QGridLayout(Preferences);
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
-        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         gridLayout->addItem(horizontalSpacer, 1, 0, 1, 1);
 
         ok_button = new QPushButton(Preferences);
-        ok_button->setObjectName(QStringLiteral("ok_button"));
+        ok_button->setObjectName(QString::fromUtf8("ok_button"));
 
         gridLayout->addWidget(ok_button, 1, 1, 1, 1);
 
@@ -61,7 +58,7 @@ public:
         gridLayout->addItem(verticalSpacer, 0, 1, 1, 1);
 
         autostartCheckBox = new QCheckBox(Preferences);
-        autostartCheckBox->setObjectName(QStringLiteral("autostartCheckBox"));
+        autostartCheckBox->setObjectName(QString::fromUtf8("autostartCheckBox"));
 
         gridLayout->addWidget(autostartCheckBox, 0, 0, 1, 1);
 
@@ -73,9 +70,9 @@ public:
 
     void retranslateUi(QWidget *Preferences)
     {
-        Preferences->setWindowTitle(QApplication::translate("Preferences", "Preferences", Q_NULLPTR));
-        ok_button->setText(QApplication::translate("Preferences", "OK", Q_NULLPTR));
-        autostartCheckBox->setText(QApplication::translate("Preferences", "Start with Windows", Q_NULLPTR));
+        Preferences->setWindowTitle(QApplication::translate("Preferences", "Preferences", nullptr));
+        ok_button->setText(QApplication::translate("Preferences", "OK", nullptr));
+        autostartCheckBox->setText(QApplication::translate("Preferences", "Start with Windows", nullptr));
     } // retranslateUi
 
 };

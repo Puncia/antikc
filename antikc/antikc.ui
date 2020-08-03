@@ -6,36 +6,75 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>400</height>
+    <width>464</width>
+    <height>672</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>464</width>
+    <height>672</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Source Code Pro</family>
+    <pointsize>10</pointsize>
+    <weight>50</weight>
+    <italic>false</italic>
+    <bold>false</bold>
+   </font>
   </property>
   <property name="windowTitle">
    <string>antikc</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QMainWindow
+   <string notr="true">QWidget
 {
-	background-color: rgb(202, 225, 255);
+	font: 10pt &quot;Source Code Pro&quot;;
+	border-radius: 4px;
+}
+
+QMainWindow
+{
+	background-color: rgb(47, 49, 54);
+	border-radius: 4px;
 }
 
 QMenuBar
 {
-	
-	background-color: rgb(128, 194, 255);
+	border-radius: 4px;
+	background-color: #2F3136;
+	color: #F9F3ED;
+}
+
+QMenuBar::item:selected
+{
+	border-radius: 4px;
+	background-color: #5C626C;
+	color: #F9F3ED;
 }
 
 QMenu
 {
-	background-color: rgb(202, 225, 255);
+	border-radius: 4px;
+	background-color: #51545E;
+	color: #F9F3ED;
 }
 
+QMenu::item
+{
+	border-radius: 4px;
+	padding: 5px;
+}
 
 QMenu::item:selected
-{
-	background-color: rgb(221, 236, 255);
-	color: rgb(36, 36, 36);
- }
+{	
+	border-radius: 4px;
+	background-color: #5C626C;
+	color: #F9F3ED;
+}
+
 </string>
   </property>
   <widget class="QWidget" name="centralWidget">
@@ -43,28 +82,39 @@ QMenu::item:selected
     <string notr="true">
 QLabel
 {
-	color: rgb(36, 36, 36);
+	color: #DCDDD9;
+}
+
+QHeaderView
+{
+	border: 0px;
 }
 
 QHeaderView::section
 {	
-	color: rgb(45, 45, 45);
+	border-radius: 0px;
+	padding-left: 3px;
+	color: #DCDDD9;
+	background-color: #393C42;
 }
 
 QTableView
 {
-	gridline-color: rgb(106, 106, 106);
+	border-radius: 4px;
+	background-color: #2F3136;
+	gridline-color: #2F3136;
 	outline: 0;
 }
 
 QTableView::item
 {
+	color: #DCDDD9;
 	border: 0px;
 }
 
 QTableView::item::selected
 {
-	background-color: rgb(104, 180, 255);
+	background-color:#40444B;
 }
 
 QScrollBar:vertical {              
@@ -94,13 +144,6 @@ QScrollBar:vertical {
     }</string>
    </property>
    <layout class="QGridLayout" name="gridLayout">
-    <item row="2" column="0" colspan="4">
-     <widget class="QTableView" name="tableView">
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-     </widget>
-    </item>
     <item row="1" column="3">
      <widget class="QLineEdit" name="lineEdit">
       <property name="maximumSize">
@@ -110,20 +153,23 @@ QScrollBar:vertical {
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
+       <string notr="true">color: #DFD9D4;
+background-color: #40444B;
+border: 0px;
+border-radius: 4px;</string>
       </property>
       <property name="text">
        <string>85</string>
       </property>
      </widget>
     </item>
-    <item row="1" column="2">
-     <widget class="QLabel" name="label">
+    <item row="3" column="3">
+     <widget class="QLabel" name="version_label">
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">color: rgb(76, 76, 76);</string>
       </property>
       <property name="text">
-       <string>ms</string>
+       <string/>
       </property>
      </widget>
     </item>
@@ -140,26 +186,20 @@ QScrollBar:vertical {
       </property>
      </spacer>
     </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label_2">
-      <property name="font">
-       <font>
-        <family>Noto Mono</family>
-        <pointsize>14</pointsize>
-       </font>
+    <item row="1" column="4">
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true"/>
       </property>
       <property name="text">
-       <string>antikc</string>
+       <string>ms</string>
       </property>
      </widget>
     </item>
-    <item row="3" column="3">
-     <widget class="QLabel" name="version_label">
+    <item row="2" column="0" colspan="5">
+     <widget class="QTableView" name="tableView">
       <property name="styleSheet">
-       <string notr="true">color: rgb(76, 76, 76);</string>
-      </property>
-      <property name="text">
-       <string/>
+       <string notr="true"/>
       </property>
      </widget>
     </item>
@@ -170,8 +210,8 @@ QScrollBar:vertical {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>600</width>
-     <height>21</height>
+     <width>464</width>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">

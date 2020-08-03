@@ -35,7 +35,7 @@ antikc::antikc(QWidget *parent)
 	iModel = new QStandardItemModel(0, 4);
 	
 	QStringList headers;
-	headers << "Key" << "Timing" << "Threshold" << "# Chatters";
+	headers << "key" << "timing" << "threshold" << "chatters";
 
 	iModel->setHorizontalHeaderLabels(headers);
 	ui.tableView->verticalHeader()->setVisible(false);
@@ -44,6 +44,7 @@ antikc::antikc(QWidget *parent)
 	ui.tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
 	ui.tableView->setSelectionBehavior(QAbstractItemView::SelectionBehavior::SelectRows);
 	ui.tableView->horizontalHeader()->setHighlightSections(false);
+	ui.tableView->horizontalHeader()->setDefaultAlignment(Qt::AlignLeft | Qt::AlignVCenter);
 	ui.tableView->setSelectionMode(QAbstractItemView::SelectionMode::SingleSelection);
 	ui.tableView->setModel(iModel);
 	ui.tableView->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);

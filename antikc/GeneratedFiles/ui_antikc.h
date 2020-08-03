@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'antikc.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.12.9
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -12,7 +12,6 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
@@ -33,12 +32,11 @@ public:
     QAction *actionQuit;
     QWidget *centralWidget;
     QGridLayout *gridLayout;
-    QTableView *tableView;
     QLineEdit *lineEdit;
-    QLabel *label;
-    QSpacerItem *horizontalSpacer;
-    QLabel *label_2;
     QLabel *version_label;
+    QSpacerItem *horizontalSpacer;
+    QLabel *label;
+    QTableView *tableView;
     QMenuBar *menuBar;
     QMenu *menuFile;
     QMenu *menuSettings;
@@ -46,62 +44,104 @@ public:
     void setupUi(QMainWindow *antikcClass)
     {
         if (antikcClass->objectName().isEmpty())
-            antikcClass->setObjectName(QStringLiteral("antikcClass"));
-        antikcClass->resize(600, 400);
-        antikcClass->setStyleSheet(QLatin1String("QMainWindow\n"
+            antikcClass->setObjectName(QString::fromUtf8("antikcClass"));
+        antikcClass->resize(464, 672);
+        QFont font;
+        font.setFamily(QString::fromUtf8("Source Code Pro"));
+        font.setPointSize(10);
+        font.setBold(false);
+        font.setItalic(false);
+        font.setWeight(50);
+        antikcClass->setFont(font);
+        antikcClass->setStyleSheet(QString::fromUtf8("QWidget\n"
 "{\n"
-"	background-color: rgb(202, 225, 255);\n"
+"	font: 10pt \"Source Code Pro\";\n"
+"	border-radius: 4px;\n"
+"}\n"
+"\n"
+"QMainWindow\n"
+"{\n"
+"	background-color: rgb(47, 49, 54);\n"
+"	border-radius: 4px;\n"
 "}\n"
 "\n"
 "QMenuBar\n"
 "{\n"
-"	\n"
-"	background-color: rgb(128, 194, 255);\n"
+"	border-radius: 4px;\n"
+"	background-color: #2F3136;\n"
+"	color: #F9F3ED;\n"
+"}\n"
+"\n"
+"QMenuBar::item:selected\n"
+"{\n"
+"	border-radius: 4px;\n"
+"	background-color: #5C626C;\n"
+"	color: #F9F3ED;\n"
 "}\n"
 "\n"
 "QMenu\n"
 "{\n"
-"	background-color: rgb(202, 225, 255);\n"
+"	border-radius: 4px;\n"
+"	background-color: #51545E;\n"
+"	color: #F9F3ED;\n"
 "}\n"
 "\n"
+"QMenu::item\n"
+"{\n"
+"	border-radius: 4px;\n"
+"	padding: 5px;\n"
+"}\n"
 "\n"
 "QMenu::item:selected\n"
-"{\n"
-"	background-color: rgb(221, 236, 255);\n"
-"	color: rgb(36, 36, 36);\n"
-" }\n"
+"{	\n"
+"	border-radius: 4px;\n"
+"	background-color: #5C626C;\n"
+"	color: #F9F3ED;\n"
+"}\n"
+"\n"
 ""));
         actionPreferences = new QAction(antikcClass);
-        actionPreferences->setObjectName(QStringLiteral("actionPreferences"));
+        actionPreferences->setObjectName(QString::fromUtf8("actionPreferences"));
         actionQuit = new QAction(antikcClass);
-        actionQuit->setObjectName(QStringLiteral("actionQuit"));
+        actionQuit->setObjectName(QString::fromUtf8("actionQuit"));
         centralWidget = new QWidget(antikcClass);
-        centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        centralWidget->setStyleSheet(QLatin1String("\n"
+        centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
+        centralWidget->setStyleSheet(QString::fromUtf8("\n"
 "QLabel\n"
 "{\n"
-"	color: rgb(36, 36, 36);\n"
+"	color: #DCDDD9;\n"
+"}\n"
+"\n"
+"QHeaderView\n"
+"{\n"
+"	border: 0px;\n"
 "}\n"
 "\n"
 "QHeaderView::section\n"
 "{	\n"
-"	color: rgb(45, 45, 45);\n"
+"	border-radius: 0px;\n"
+"	padding-left: 3px;\n"
+"	color: #DCDDD9;\n"
+"	background-color: #393C42;\n"
 "}\n"
 "\n"
 "QTableView\n"
 "{\n"
-"	gridline-color: rgb(106, 106, 106);\n"
+"	border-radius: 4px;\n"
+"	background-color: #2F3136;\n"
+"	gridline-color: #2F3136;\n"
 "	outline: 0;\n"
 "}\n"
 "\n"
 "QTableView::item\n"
 "{\n"
+"	color: #DCDDD9;\n"
 "	border: 0px;\n"
 "}\n"
 "\n"
 "QTableView::item::selected\n"
 "{\n"
-"	background-color: rgb(104, 180, 255);\n"
+"	background-color:#40444B;\n"
 "}\n"
 "\n"
 "QScrollBar:vertical {              \n"
@@ -116,11 +156,11 @@ public:
 "        min-height: 0px;\n"
 "    }\n"
 "    QScrollBar::add-line:vertical {\n"
-"        background: qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
+"        background: "
+                        "qlineargradient(x1:0, y1:0, x2:1, y2:0,\n"
 "        stop: 0 rgb(118, 134, 224), stop: 0.5 rgb(118, 134, 224),  stop:1 rgb(118, 134, 224));\n"
 "        height: 0px;\n"
-"   "
-                        "     subcontrol-position: bottom;\n"
+"        subcontrol-position: bottom;\n"
 "        subcontrol-origin: margin;\n"
 "    }\n"
 "    QScrollBar::sub-line:vertical {\n"
@@ -133,53 +173,47 @@ public:
         gridLayout = new QGridLayout(centralWidget);
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
-        gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        tableView = new QTableView(centralWidget);
-        tableView->setObjectName(QStringLiteral("tableView"));
-        tableView->setStyleSheet(QStringLiteral(""));
-
-        gridLayout->addWidget(tableView, 2, 0, 1, 4);
-
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         lineEdit = new QLineEdit(centralWidget);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
         lineEdit->setMaximumSize(QSize(50, 16777215));
-        lineEdit->setStyleSheet(QStringLiteral("background-color: rgb(255, 255, 255);"));
+        lineEdit->setStyleSheet(QString::fromUtf8("color: #DFD9D4;\n"
+"background-color: #40444B;\n"
+"border: 0px;\n"
+"border-radius: 4px;"));
 
         gridLayout->addWidget(lineEdit, 1, 3, 1, 1);
 
-        label = new QLabel(centralWidget);
-        label->setObjectName(QStringLiteral("label"));
-        label->setStyleSheet(QStringLiteral(""));
+        version_label = new QLabel(centralWidget);
+        version_label->setObjectName(QString::fromUtf8("version_label"));
+        version_label->setStyleSheet(QString::fromUtf8("color: rgb(76, 76, 76);"));
 
-        gridLayout->addWidget(label, 1, 2, 1, 1);
+        gridLayout->addWidget(version_label, 3, 3, 1, 1);
 
         horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         gridLayout->addItem(horizontalSpacer, 1, 1, 1, 1);
 
-        label_2 = new QLabel(centralWidget);
-        label_2->setObjectName(QStringLiteral("label_2"));
-        QFont font;
-        font.setFamily(QStringLiteral("Noto Mono"));
-        font.setPointSize(14);
-        label_2->setFont(font);
+        label = new QLabel(centralWidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setStyleSheet(QString::fromUtf8(""));
 
-        gridLayout->addWidget(label_2, 1, 0, 1, 1);
+        gridLayout->addWidget(label, 1, 4, 1, 1);
 
-        version_label = new QLabel(centralWidget);
-        version_label->setObjectName(QStringLiteral("version_label"));
-        version_label->setStyleSheet(QStringLiteral("color: rgb(76, 76, 76);"));
+        tableView = new QTableView(centralWidget);
+        tableView->setObjectName(QString::fromUtf8("tableView"));
+        tableView->setStyleSheet(QString::fromUtf8(""));
 
-        gridLayout->addWidget(version_label, 3, 3, 1, 1);
+        gridLayout->addWidget(tableView, 2, 0, 1, 5);
 
         antikcClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(antikcClass);
-        menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 600, 21));
+        menuBar->setObjectName(QString::fromUtf8("menuBar"));
+        menuBar->setGeometry(QRect(0, 0, 464, 23));
         menuFile = new QMenu(menuBar);
-        menuFile->setObjectName(QStringLiteral("menuFile"));
+        menuFile->setObjectName(QString::fromUtf8("menuFile"));
         menuSettings = new QMenu(menuBar);
-        menuSettings->setObjectName(QStringLiteral("menuSettings"));
+        menuSettings->setObjectName(QString::fromUtf8("menuSettings"));
         antikcClass->setMenuBar(menuBar);
 
         menuBar->addAction(menuFile->menuAction());
@@ -194,15 +228,14 @@ public:
 
     void retranslateUi(QMainWindow *antikcClass)
     {
-        antikcClass->setWindowTitle(QApplication::translate("antikcClass", "antikc", Q_NULLPTR));
-        actionPreferences->setText(QApplication::translate("antikcClass", "Preferences", Q_NULLPTR));
-        actionQuit->setText(QApplication::translate("antikcClass", "Quit", Q_NULLPTR));
-        lineEdit->setText(QApplication::translate("antikcClass", "85", Q_NULLPTR));
-        label->setText(QApplication::translate("antikcClass", "ms", Q_NULLPTR));
-        label_2->setText(QApplication::translate("antikcClass", "antikc", Q_NULLPTR));
+        antikcClass->setWindowTitle(QApplication::translate("antikcClass", "antikc", nullptr));
+        actionPreferences->setText(QApplication::translate("antikcClass", "Preferences", nullptr));
+        actionQuit->setText(QApplication::translate("antikcClass", "Quit", nullptr));
+        lineEdit->setText(QApplication::translate("antikcClass", "85", nullptr));
         version_label->setText(QString());
-        menuFile->setTitle(QApplication::translate("antikcClass", "File", Q_NULLPTR));
-        menuSettings->setTitle(QApplication::translate("antikcClass", "Settings", Q_NULLPTR));
+        label->setText(QApplication::translate("antikcClass", "ms", nullptr));
+        menuFile->setTitle(QApplication::translate("antikcClass", "File", nullptr));
+        menuSettings->setTitle(QApplication::translate("antikcClass", "Settings", nullptr));
     } // retranslateUi
 
 };
